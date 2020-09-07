@@ -1,0 +1,27 @@
+{
+  "name": "auto.uffs.cc",
+  "version": "1.0.0",
+  "description": "Sistema de automação e interligação de serviços utilizado pelos aplicativos do curso.",
+  "main": "n8n.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "greenlock": "^4.0.4",
+    "n8n": "^0.80.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccuffs/auto.uffs.cc.git"
+  },
+  "author": "Fernando Bevilacqua",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ccuffs/auto.uffs.cc/issues"
+  },
+  "homepage": "https://github.com/ccuffs/auto.uffs.cc#readme"
+}
