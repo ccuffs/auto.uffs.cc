@@ -265,3 +265,4 @@ electron-build
 electron/www
 typings
 /n8n.pid
+/.env
