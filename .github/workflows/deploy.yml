@@ -21,3 +21,4 @@ jobs:
         script: |
           cd ${{ env.PROD_WEB_DIRECTORY }}
           git pull
+          npm install

@@ -1,0 +1,5 @@
+# This app renew HTTPS certs automatically, so not redirect from HTTP should
+# be performed. If that changes one day, the following lines can be uncommented:
+# 
+# RewriteCond %{HTTPS} !=on
+# RewriteRule ^(.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
