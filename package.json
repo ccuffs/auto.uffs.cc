@@ -7,10 +7,7 @@
     "doc": "docs"
   },
   "dependencies": {
-    "@greenlock/manager": "^3.1.0",
-    "acme-http-01-standalone": "^3.0.5",
-    "greenlock": "^4.0.4",
-    "greenlock-store-fs": "^3.2.2",
+    "greenlock-cli": "^2.3.3",
     "n8n": "^0.80.0"
   },
   "devDependencies": {},
@@ -21,7 +18,10 @@
     "type": "git",
     "url": "git+https://github.com/ccuffs/auto.uffs.cc.git"
   },
-  "author": "Fernando Bevilacqua",
+  "author": {
+    "name": "Fernando Bevilacqua",
+    "email": "fernando.bevilacqua@uffs.edu.br"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ccuffs/auto.uffs.cc/issues"
