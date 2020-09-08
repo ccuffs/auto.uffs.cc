@@ -6,8 +6,8 @@ on:
       - dev
 env:
   BUILD_HOST: ci.uffs.cc
-  BUILD_WEB_DIRECTORY: /home/ccuffsci/ci.uffs.cc/template
-  BUILD_WEB_URL: https://ci.uffs.cc/template
+  BUILD_WEB_DIRECTORY: /home/ccuffsci/ci.uffs.cc/auto.uffs.cc
+  BUILD_WEB_URL: https://ci.uffs.cc/auto.uffs.cc
 jobs:
   build-deploy-audit:
     name: Build, deploy and audit
@@ -24,14 +24,13 @@ jobs:
         host: ${{ env.BUILD_HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
         script: |
           mkdir -p ${{ env.BUILD_WEB_DIRECTORY }}/${{ steps.extract_branch.outputs.branch }}/${{ github.sha }}
           mkdir -p ${{ env.BUILD_WEB_DIRECTORY }}/${{ steps.extract_branch.outputs.branch }}/${{ github.sha }}/_report
     - name: Deploy site via SSH
       uses: garygrossgarten/github-action-scp@release
       with:
-        local: ${{ github.workspace }}/
+        local: ${{ github.workspace }}/public/
         remote: ${{ env.BUILD_WEB_DIRECTORY }}/${{ steps.extract_branch.outputs.branch }}/${{ github.sha }}/
         host: ${{ env.BUILD_HOST }}
         username: ${{ secrets.USERNAME }}
