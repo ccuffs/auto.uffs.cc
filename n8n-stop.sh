@@ -1,3 +1,4 @@
 #!/bin/bash
-kill -9 `cat /home/ccuffssys/auto.uffs.cc/n8n.pid`
-rm /home/ccuffssys/auto.uffs.cc/n8n.pid
+BASEDIR=$(dirname "$0")
+kill -9 `cat $BASEDIR/n8n.pid`
+rm $BASEDIR/n8n.pid

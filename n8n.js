@@ -13,7 +13,7 @@ var versionFlags = [ // tslint:disable-line:no-var-keyword
 	'--version'
 ];
 if (versionFlags.includes(process.argv.slice(-1)[0])) {
-	console.log(require('../package').version);
+	console.log(require('./package').version);
 	process.exit(0);
 }
 

@@ -1,6 +1,7 @@
 #!/bin/bash
 
-MAIN_APP_ENV_FILE=.env.example
+BASEDIR=$(dirname "$0")
+MAIN_APP_ENV_FILE=$BASEDIR/.env
 
 if [ -f "$MAIN_APP_ENV_FILE" ]; then
     echo "Sourcing $MAIN_APP_ENV_FILE"

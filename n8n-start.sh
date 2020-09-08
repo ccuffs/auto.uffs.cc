@@ -1,3 +1,4 @@
 #!/bin/bash
-nohup /home/ccuffssys/auto.uffs.cc/n8n.js >> /home/ccuffssys/auto.uffs.cc/n8n.log 2>&1 &
-echo $! > /home/ccuffssys/auto.uffs.cc/n8n.pid
+BASEDIR=$(dirname "$0")
+nohup $BASEDIR/n8n.js >> $BASEDIR/n8n.log 2>&1 &
+echo $! > $BASEDIR/n8n.pid
