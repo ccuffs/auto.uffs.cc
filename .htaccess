@@ -1,3 +1,7 @@
+# Allow access to .well-known dir for LetsEncrypt.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^\.well-known/.+ - [END]
+
 # This app renew HTTPS certs automatically, so not redirect from HTTP should
 # be performed. If that changes one day, the following lines can be uncommented:
 # 
